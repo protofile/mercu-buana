@@ -171,7 +171,7 @@
   /* IMAGE AND RATIO END */
 
   header{
-    @apply w-full py-5 flex justify-center transition-all fixed top-0 left-0 z-[9999];
+    @apply w-full my-5 flex justify-center transition-all fixed top-0 left-0 z-[9999];
   }
   .main-menu{
     @apply flex gap-5 items-center justify-center px-10 relative before:w-full;
@@ -192,13 +192,13 @@
     @apply transition-all w-[120px] h-[120px] object-contain;
   }
 
-  header.scrolled .logo{
+  .scrolled .logo{
     @apply bg-white rounded-full;
   }
-  header.scrolled .logo img{
+  .scrolled .logo img{
     @apply w-[88px] h-[88px];
   }
-  header.scrolled .main-menu::before{
+  .scrolled .main-menu::before{
     @apply bg-none !bg-white shadow-2xl;
   }
 
@@ -238,7 +238,9 @@
   .accordion-item{
     @apply w-full border-t border-t-slate-300 py-8;
   }
-
+  .accordion-item-header{
+    @apply px-[5px]
+  }
   .accordion-toggle-btn{
     @apply w-10 h-10 flex justify-center items-center text-lg bg-slate-300 rounded-full text-slate-600 transition-all hover:cursor-pointer hover:bg-mc-green-1 hover:text-slate-100;
   }
@@ -255,6 +257,9 @@
     @apply mt-8;
   }
 
+  #biaya .form-biaya{
+    @apply flex flex-col gap-5;
+  }
   #biaya .section-title.vertical{
     @apply items-start mb-8 gap-2;
   }
@@ -323,7 +328,7 @@
     @apply before:w-full bg-mc-blue-2 relative pt-14;
   }
   footer::before{
-    @apply h-[300px] pointer-events-none absolute top-0 left-0 bg-[url(../images/footer-bg.png)] bg-no-repeat bg-left-top bg-contain;
+    @apply h-[300px] pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 bg-[url(../images/footer-bg.png)] bg-no-repeat bg-left-top bg-contain;
   }
   footer p,
   footer a,
@@ -334,11 +339,21 @@
   .foot-nav{
     @apply flex gap-5 items-center justify-center py-10;
   }
+  .foot-nav a{
+    @apply text-sm;
+  }
   .social{
     @apply flex gap-2 items-center;
   }
   .social a{
     @apply w-9 h-9 flex justify-center items-center bg-white text-mc-blue-2 rounded-full;
+  }
+  .social span{
+    @apply text-sm font-bold;
+  }
+  
+  .bottom-footer{
+    @apply flex justify-between items-center;
   }
 
   .fasilitas-slider{
@@ -365,5 +380,140 @@
   }
   .fasilitas-card img{
     @apply rounded-2xl;
+  }
+}
+
+/* FOR DESKTOP AND MOBILE */
+@media only screen and (max-width:1024px){
+  .for-desktop{
+    @apply !hidden;
+  }
+}
+@media only screen and (min-width:1025px){
+  .for-mobile{
+    @apply !hidden;
+  }
+}
+/* END FOR DESKTOP AND MOBILE */
+
+header.for-mobile{
+  @apply px-5;
+}
+.mobile-header{
+  @apply w-full flex justify-between items-center rounded-full bg-gradient-to-r from-slate-200 to-white;
+}
+.mobile-header .mobile-logo{
+  @apply w-20 h-20 p-0 transition-all rounded-full -mt-[15px] -mb-[15px];
+}
+.scrolled .mobile-header{
+  @apply shadow-2xl;
+}
+.mobile-header .mobile-logo img{
+  @apply w-full h-full object-contain;
+}
+.scrolled .mobile-header .mobile-logo{
+  @apply p-2 bg-white;
+}
+.burger{
+  @apply w-[50px] h-[50px] flex justify-center items-center text-lg;
+}
+
+.mobile-menu{
+  @apply transition-all opacity-0 pointer-events-none absolute top-[40px] right-5 w-[240px] py-3 bg-white rounded-2xl flex flex-col shadow-2xl;
+}
+.mobile-menu.show{
+  @apply top-[60px] opacity-100 pointer-events-auto;
+}
+.mobile-menu a{
+  @apply px-5 py-3 text-sm w-full text-right;
+}
+
+@media only screen and (max-width:1024px){
+  .section-title{
+    @apply flex-col items-start;
+  }
+  .section-title h2,
+  .section-title p{
+    @apply !w-full;
+  }
+
+  .hero{
+    @apply bg-bottom bg-cover;
+  }
+  .hero::before{
+    @apply w-full;
+  }
+  .hero-text{
+    @apply mb-20;
+  }
+
+  .accordion-item-header{
+    @apply relative;
+  }
+  .accordion-item .col-md-3{
+    @apply static;
+  }
+  .accordion-toggle-btn{
+    @apply absolute top-0 right-0;
+  }
+  .accordion-item h2{
+    @apply mb-5;
+  }
+
+  .form-biaya{
+    @apply mb-10;
+  }
+  
+  .cta{
+    @apply w-full overflow-hidden;
+  }
+  .cta .section-bg{
+    @apply h-[600px] object-cover;
+  }
+  #e-brosur h2{
+    @apply text-3xl;
+  }
+
+  #why{
+    @apply -mt-16;
+  }
+
+  .fakta-card{
+    @apply mb-10;
+  }
+  .fakta-card .pic{
+    @apply px-0;
+  }
+  .fakta-card .text{
+    @apply p-4 pt-14 h-[140px];
+  }
+  .fakta-card .data{
+    @apply text-2xl;
+  }
+  .fakta-card .label{
+    @apply text-xs;
+  }
+  .fakta-card .pic img{
+    @apply w-10 h-10;
+  }
+  .maps{
+    @apply mt-5;
+  }
+
+  footer::before{
+    @apply bg-cover h-[200px];
+    background-position-x: center;
+  }
+  .bottom-footer{
+    @apply flex-col;
+  }
+  .bottom-footer p{
+    @apply text-center mt-5;
+  }
+  .foot-nav{
+    @apply block text-center;
+  }
+  .foot-nav a{
+    @apply inline-block px-2 py-2;
   }
 }

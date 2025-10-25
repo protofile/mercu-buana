@@ -20,9 +20,9 @@
     </head>
     <body>
         <div class="master">
-            <header class="">
+            <header class="for-desktop">
                 <div class="main-menu">
-                    <div class="menu left-menu">
+                    <div class="menu left-menu scroll-menu">
                         <a href="#beranda" class="menu-item">HOME</a>
                         <a href="#program-studi" class="menu-item">PROGRAM STUDI</a>
                         <a href="#biaya" class="menu-item">BIAYA</a>
@@ -31,7 +31,7 @@
                     <a href="#" class="logo">
                         <img src="assets/images/logo.png" alt="">
                     </a>
-                    <div class="menu right-menu">
+                    <div class="menu right-menu scroll-menu">
                         <a href="#why" class="menu-item">WHY UMB?</a>
                         <a href="#faktadata" class="menu-item">FAKTA DATA</a>
                         <a href="#fasilitas" class="menu-item">FASILITAS</a>
@@ -40,16 +40,37 @@
                 </div>
             </header>
 
+            <header class="for-mobile">
+                <div class="mobile-header">
+                    <a href="#" class="mobile-logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <div class="burger">
+                        <i class='ri-menu-2-line'></i>
+                    </div>
+                </div>
+                <div class="mobile-menu scroll-menu">
+                    <a href="#beranda">HOME</a>
+                    <a href="#program-studi">PROGRAM STUDI</a>
+                    <a href="#biaya">BIAYA</a>
+                    <a href="#e-brosur">E-BROSUR</a>
+                    <a href="#why">WHY UMB?</a>
+                    <a href="#faktadata">FAKTA DATA</a>
+                    <a href="#fasilitas">FASILITAS</a>
+                    <a href="#lokasi">LOKASI</a>
+                </div>
+            </header>
+
             <section id="beranda" class="hero pb-16">
                 <div class="container">
                     <div class="row items-center mb-20 bg-hero">
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
                             <div class="hero-text">
                                 <h1>Wujudkan Masa Depan Gemilang Bersama Universitas Mercu Buana</h1>
                                 <p>Universitas Mercu Buana menghadirkan Program R2 yang dirancang fleksibel untuk mendukung kesibukan Anda. Pilih jalur terbaik mulai dari Kelas Karyawan, Magister (S2), Doktor (S3), hingga Profesi, dengan biaya kuliah terjangkau, jadwal perkuliahan yang adaptif, dan kualitas pengajar berpengalaman.</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4">
                             <form action="" class="reg-form">
                                 <h3 class="text-center">Form Pendaftaran</h3>
                                 <div class="inp-group">
@@ -465,7 +486,7 @@
                                 <h2>Biaya Kuliah di UMB</h2>
                                 <p>Pilih kelas dan jurusan untuk mengetahui biaya kuliah</p>
                             </div>
-                            <div class="flex flex-col gap-5">
+                            <div class="form-biaya">
                                 <div class="inp-group">
                                     <label for="">Jenjang</label>
                                     <select name="" id="">
@@ -483,7 +504,9 @@
                                     </select>
                                 </div>
                                 <div class="inp-group">
-                                    <button class="btn btn-primary">Lihat Biaya</button>
+                                    <div>   
+                                        <button class="btn btn-primary">Lihat Biaya</button>
+                                    </div>  
                                 </div>
                             </div>
                         </div>
@@ -532,55 +555,59 @@
                         </div>
                     </div>
                     <div class="row mt-10">
-                        <div class="col-md-3">
-                            <div class="news-card-overlay">
-                                <div class="pic">
-                                    <figure class="ratio ratio-135">
-                                        <img src="assets/images/bank/img-6.jpg" alt="">
-                                    </figure>
+                        <div class="col-md-12">
+                            <div class="owl-carousel why-slider">
+                                <div class="item">
+                                    <div class="news-card-overlay">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-135">
+                                                <img src="assets/images/bank/img-6.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Akreditasi Tinggi</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h4>Akreditasi Tinggi</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                                <div class="item">
+                                    <div class="news-card-overlay">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-135">
+                                                <img src="assets/images/bank/img-6.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Akreditasi Tinggi</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="news-card-overlay">
-                                <div class="pic">
-                                    <figure class="ratio ratio-135">
-                                        <img src="assets/images/bank/img-6.jpg" alt="">
-                                    </figure>
+                                <div class="item">
+                                    <div class="news-card-overlay">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-135">
+                                                <img src="assets/images/bank/img-6.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Akreditasi Tinggi</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h4>Akreditasi Tinggi</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="news-card-overlay">
-                                <div class="pic">
-                                    <figure class="ratio ratio-135">
-                                        <img src="assets/images/bank/img-6.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="text">
-                                    <h4>Akreditasi Tinggi</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="news-card-overlay">
-                                <div class="pic">
-                                    <figure class="ratio ratio-135">
-                                        <img src="assets/images/bank/img-6.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="text">
-                                    <h4>Akreditasi Tinggi</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                                <div class="item">
+                                    <div class="news-card-overlay">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-135">
+                                                <img src="assets/images/bank/img-6.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="text">
+                                            <h4>Akreditasi Tinggi</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -598,7 +625,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3">
                             <div class="fakta-card">
                                 <div class="pic">
                                     <img src="assets/images/ico-alumni.png" alt="">
@@ -609,7 +636,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3">
                             <div class="fakta-card">
                                 <div class="pic">
                                     <img src="assets/images/ico-wur.png" alt="">
@@ -620,7 +647,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3">
                             <div class="fakta-card">
                                 <div class="pic">
                                     <img src="assets/images/ico-scimago.png" alt="">
@@ -631,7 +658,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-6 col-md-3">
                             <div class="fakta-card">
                                 <div class="pic">
                                     <img src="assets/images/ico-mahasiswa.png" alt="">
@@ -704,17 +731,13 @@
             </section>
             <section id="lokasi" class="py-16">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title">    
+                    <div class="row items-center">
+                        <div class="col-md-3">
+                            <div class="section-title mb-5">    
                                 <h2>Lokasi Kampus</h2>
                             </div>
-                        </div> 
-                    </div>
-                    <div class="row mt-10">
-                        <div class="col-md-3">
                             <div class="flex flex-col gap-2.5">
-                                <a href="#" class="btn-lokasi">
+                                <a href="#" class="btn-lokasi active">
                                     <div class="flex gap-2 items-center">
                                         <i class='ri-road-map-fill'></i> Kampus Meruya
                                     </div>
@@ -772,7 +795,7 @@
                     </div>
                     <div class="row py-10 border-t border-t-slate-500">
                         <div class="col-md-12">
-                            <div class="flex justify-between items-center">
+                            <div class="bottom-footer">
                                 <div class="social">
                                     <span>Follow Us:</span> 
                                     <a href="#"><i class='ri-facebook-fill'></i></a>
