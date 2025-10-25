@@ -429,7 +429,7 @@ header.for-mobile{
 }
 
 .cta h2{
-  @apply w-full text-center text-slate-100 text-[42px] leading-12;
+  @apply w-full text-center text-slate-100 text-[42px] leading-10;
 }
 
 @media only screen and (max-width:1024px){
