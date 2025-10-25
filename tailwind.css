@@ -428,6 +428,10 @@ header.for-mobile{
   @apply px-5 py-3 text-sm w-full text-right;
 }
 
+.cta h2{
+  @apply w-full text-center text-slate-100 text-[42px] leading-12;
+}
+
 @media only screen and (max-width:1024px){
   .section-title{
     @apply flex-col items-start;
