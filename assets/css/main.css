@@ -568,14 +568,6 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
-.top-0 {
-  top: 0px;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -703,17 +695,16 @@ video {
   padding-bottom: 4rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pb-16 {
   padding-bottom: 4rem;
 }
 
 .pb-\[200px\] {
   padding-bottom: 200px;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .pt-16 {
@@ -724,12 +715,13 @@ video {
   padding-top: 200px;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .text-center {
   text-align: center;
+}
+
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 /*
@@ -1253,6 +1245,8 @@ header {
 
 .accordion-item.active .accordion-body {
   max-height: 1000px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 2rem;
 }
 
