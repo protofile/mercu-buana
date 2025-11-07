@@ -604,6 +604,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[640px\] {
+  max-width: 640px;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -644,6 +648,10 @@ video {
   gap: 2rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -661,21 +669,35 @@ video {
   border-top-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
-.border-t-\[rgba\(255\2c 255\2c 255\2c 0\.3\)\] {
-  border-top-color: rgba(255,255,255,0.3);
-}
-
-.border-t-\[rgba\(255\2c 255\2c 255\2c 0\.1\)\] {
-  border-top-color: rgba(255,255,255,0.1);
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-mc-blue-2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 33 87 / var(--tw-bg-opacity));
+}
+
+.bg-mc-blue-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 83 141 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(assets\/images\/mercu-buana-overlay\.jpg\)\] {
+  background-image: url(assets/images/mercu-buana-overlay.jpg);
+}
+
+.bg-\[url\(\'assets\/images\/mercu-buana-overlay\.jpg\'\)\] {
+  background-image: url('assets/images/mercu-buana-overlay.jpg');
+}
+
+.bg-\[url\(\.\.\/images\/mercu-buana-overlay\.jpg\)\] {
+  background-image: url(../images/mercu-buana-overlay.jpg);
 }
 
 .from-slate-200 {
@@ -690,6 +712,14 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-80 {
+  padding: 20rem;
+}
+
+.p-20 {
+  padding: 5rem;
 }
 
 .px-5 {
@@ -749,6 +779,16 @@ video {
 .text-mc-green-1 {
   --tw-text-opacity: 1;
   color: rgb(95 147 28 / var(--tw-text-opacity));
+}
+
+.text-slate-100 {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
+}
+
+.text-slate-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
 /*

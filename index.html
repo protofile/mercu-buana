@@ -122,7 +122,17 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <img class="rounded-2xl" src="assets/images/mercu-buana.jpg" alt="">
+                            <div class="owl-carousel hero-slider rounded-2xl overflow-hidden">
+                                <div class="item">
+                                    <img src="assets/images/mercu-buana.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/mercu-buana.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="assets/images/mercu-buana.jpg" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -431,7 +441,7 @@
                 </div>
             </section>
 
-            <!-- <section id="biaya" class="pt-16 pb-[200px]">
+            <section id="biaya" class="pt-16 pb-[200px]">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4">
@@ -442,20 +452,48 @@
                             <div class="form-biaya">
                                 <div class="inp-group">
                                     <label for="">Jenjang</label>
-                                    <select id="jenjang" name="" id="">
-                                        <option value="" selected disabled>Pilih Jenjang</option>
-                                        <option value="Reguler S1">Reguler S1</option>
-                                        <option value="Reguler S2">Reguler S2</option>
-                                        <option value="Reguler S3">Reguler S3</option>
+                                    <select id="fakultas" name="" id="">
+                                        <option value="" selected disabled>Pilih Fakultas</option>
+                                        <option value="Fakultas Desain dan Seni Kreatif">Fakultas Desain dan Seni Kreatif (S1)</option>
+                                        <option value="Fakultas Teknik">Fakultas Teknik (S1)</option>
+                                        <option value="Fakultas Ilmu Komputer">Fakultas Ilmu Komputer (S1)</option>
+                                        <option value="Fakultas Ekonomi dan Bisnis">Fakultas Ekonomi dan Bisnis (S1)</option>
+                                        <option value="Fakultas Ilmu Komunikasi">Fakultas Ilmu Komunikasi (S1)</option>
+                                        <option value="Fakultas Psikologi">Fakultas Psikologi (S1)</option>
+                                        <option value="Fakultas Teknik S2">Fakultas Teknik (S2)</option>
+                                        <option value="Fakultas Ekonomi dan Bisnis S2">Fakultas Ekonomi dan Bisnis (S2)</option>
+                                        <option value="Fakultas Ilmu Komunikasi S2">Fakultas Ilmu Komunikasi (S2)</option>
                                     </select>
                                 </div>
                                 <div class="inp-group">
                                     <label for="">Program Studi</label>
                                     <select id="prodi" name="" id="">
                                         <option value="" selected disabled>Pilih Program Studi</option>
+                                        <option value="Desain Produk">Desain Produk</option>
                                         <option value="Desain Interior">Desain Interior</option>
                                         <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-                                        <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                        <option value="Teknik Sipil">Teknik Sipil</option>
+                                        <option value="Arsitektur">Arsitektur</option>
+                                        <option value="Teknik Mesin">Teknik Mesin</option>
+                                        <option value="Teknik Elektro">Teknik Elektro</option>
+                                        <option value="Teknik Industri">Teknik Industri</option>
+                                        <option value="Sistem Informasi">Sistem Informasi</option>
+                                        <option value="Informatika">Informatika</option>
+                                        <option value="Akuntansi">Akuntansi</option>
+                                        <option value="Manajemen">Manajemen</option>
+                                        <option value="Broadcasting">Broadcasting</option>
+                                        <option value="Public Relations">Public Relations</option>
+                                        <option value="Marketing Communication">Marketing Communication</option>
+                                        <option value="Digital Communication">Digital Communication</option>
+                                        <option value="Psikologi">Psikologi</option>
+                                        <option value="Magister Teknik Sipil">Magister Teknik Sipil</option>
+                                        <option value="Magister Teknik Mesin">Magister Teknik Mesin</option>
+                                        <option value="Magister Teknik Elektro">Magister Teknik Elektro</option>
+                                        <option value="Magister Teknik Industri">Magister Teknik Industri</option>
+                                        <option value="Magister Arsitektur">Magister Arsitektur</option>
+                                        <option value="Magister Manajemen">Magister Manajemen</option>
+                                        <option value="Magister Akuntansi">Magister Akuntansi</option>
+                                        <option value="Magister Ilmu Komunikasi">Magister Ilmu Komunikasi</option>
                                     </select>
                                 </div>
                                 <div class="inp-group">
@@ -464,27 +502,27 @@
                                     </div>  
                                 </div>
                             </div>
-                            <p class="mt-10"><a href="#" target="_blank" class="text-sm text-mc-green-1"><strong>KLIK DISINI</strong> untuk download Brosur Biaya Kuliah</a></p>
+                            <p class="mt-10"><a href="#" target="_blank" class="text-sm text-mc-green-1"><i class='ri-download-2-fill'></i> <strong>KLIK DISINI</strong> untuk download Brosur Biaya Kuliah</a></p>
                         </div>
                         <div class="col-lg-8">
                             <div class="result w-full bg-white rounded-3xl p-5 flex flex-col gap-5">
                                 <div class="biaya-card">
                                     <span>Total Biaya Semester 1</span>
-                                    <div class="price" id="total">Rp 21.580.000</div>
+                                    <div class="price" id="total">Rp -</div>
                                 </div>
                                 <div class="biaya-card">
-                                    <span>Angsuran 1</span>
-                                    <div class="price" id="angsuran1">Rp 7.500.000</div>
+                                    <span>Angsuran Pertama</span>
+                                    <div class="price" id="angsuran1">Rp -</div>
                                 </div>
                                 <div class="biaya-card">
-                                    <span>Angsuran 2 1</span>
-                                    <div class="price" id="angsuran2">Rp 3.016.000</div>
+                                    <span>Angsuran Selanjutnya</span>
+                                    <div class="price" id="angsuran2">Rp -</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section id="e-brosur" class="cta mt-20">
                 <img class="section-bg" src="assets/images/cta-bg.png" alt="">
                 <div class="container">
@@ -715,6 +753,19 @@
                     </div>
                 </div>
             </section>
+            <section class="cta-2 bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mc-banner w-full p-20 bg-[url(../images/mercu-buana-overlay.jpg)] rounded-2xl flex flex-col justify-center items-center gap-5">
+                                <h2 class="text-center text-slate-100 max-w-[640px]">Sepertinya Kamu Sudah Tidak Sabar Ingin Mendaftar</h2>
+                                <p class="text-sm text-slate-200 text-center max-w-[640px]">Dengan klik link di bawah ini, kamu akan diarahkan menuju ke halaman pendaftaran mahasiswa baru UMB. </p>
+                                <a href="#" target="_blank" class="btn btn-primary with-icon">Daftar Kuliah di UMB Sekarang!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="lokasi" class="py-16">
                 <div class="container">
                     <div class="row items-center">
@@ -809,24 +860,58 @@
         <script>
             const biayaData = {
                 "Fakultas Desain dan Seni Kreatif": {
-                    "Desain Produk": { "total": 22500000, "angsuran1": 7800000, "angsuran2": 3100000 },
-                    "Desain Interior": { "total": 21000000, "angsuran1": 7500000, "angsuran2": 2900000 },
-                    "Desain Komunikasi": { "total": 21000000, "angsuran1": 7500000, "angsuran2": 2900000 }
+                    "Desain Produk": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Desain Interior": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Desain Komunikasi Visual": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' }
                 },
-                "Magister S2": {
-                    "Manajemen": { "total": 28000000, "angsuran1": 10000000, "angsuran2": 4500000 },
-                    "Ilmu Komunikasi": { "total": 27000000, "angsuran1": 9500000, "angsuran2": 4200000 }
+                "Fakultas Teknik": {
+                    "Teknik Sipil": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Arsitektur": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Teknik Mesin": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Teknik Elektro": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Teknik Industri": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' }
+                },
+                "Fakultas Ilmu Komputer": {
+                    "Sistem Informasi": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Informatika": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' }
+                },
+                "Fakultas Ekonomi dan Bisnis": {
+                    "Akuntansi": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Manajemen": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' }
+                },
+                "Fakultas Ilmu Komunikasi": {
+                    "Broadcasting": { "pangkal": '21.675.000', "angsuran1": '3.850.000', "angsuran2": '380.000/bulan' },
+                    "Public Relations": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Marketing Communication": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
+                    "Digital Communication": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' }
+                },
+                "Fakultas Psikologi": {
+                    "Psikologi": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' }
+                },
+                "Fakultas Teknik S2": {
+                    "Magister Teknik Sipil": { "pangkal": '16.500.000', "angsuran1": '6.000.000', "angsuran2": '460.000/bulan' },
+                    "Magister Teknik Mesin": { "pangkal": '16.500.000', "angsuran1": '6.000.000', "angsuran2": '460.000/bulan' },
+                    "Magister Teknik Elektro": { "pangkal": '17.800.000', "angsuran1": '6.000.000', "angsuran2": '515.000/bulan' },
+                    "Magister Teknik Industri": { "pangkal": '17.800.000', "angsuran1": '6.000.000', "angsuran2": '515.000/bulan' },
+                    "Magister Arsitektur": { "pangkal": '13.000.000', "angsuran1": '6.000.000', "angsuran2": '305.000/bulan' }
+                },
+                "Fakultas Ekonomi dan Bisnis S2": {
+                    "Magister Manajemen": { "pangkal": '18.500.000', "angsuran1": '6.000.000', "angsuran2": '545.000/bulan' },
+                    "Magister Akuntansi": { "pangkal": '17.800.000', "angsuran1": '6.000.000', "angsuran2": '515.000/bulan' }
+                },
+                "Fakultas Ilmu Komunikasi S2": {
+                    "Magister Ilmu Komunikasi": { "pangkal": '17.800.000', "angsuran1": '6.000.000', "angsuran2": '515.000/bulan' }
                 }
             };
 
             // === Populate Program Studi when Jenjang changes ===
-            $('#jenjang').on('change', function() {
-                const jenjang = $(this).val();
+            $('#fakultas').on('change', function() {
+                const fakultas = $(this).val();
                 const prodiSelect = $('#prodi');
                 prodiSelect.empty().append('<option value="">Pilih Program Studi</option>');
 
-                if (jenjang && biayaData[jenjang]) {
-                    Object.keys(biayaData[jenjang]).forEach(prodi => {
+                if (fakultas && biayaData[fakultas]) {
+                    Object.keys(biayaData[fakultas]).forEach(prodi => {
                     prodiSelect.append(`<option value="${prodi}">${prodi}</option>`);
                     });
                 }
@@ -834,17 +919,26 @@
 
             // === Show biaya on button click ===
             $('#lihatBiaya').on('click', function() {
-                const jenjang = $('#jenjang').val();
+                const fakultas = $('#fakultas').val();
                 const prodi = $('#prodi').val();
 
-                if (jenjang && prodi && biayaData[jenjang][prodi]) {
-                    const data = biayaData[jenjang][prodi];
-                    $('#total').text('Rp ' + data.total.toLocaleString('id-ID'));
+                if (fakultas && prodi && biayaData[fakultas][prodi]) {
+                    const data = biayaData[fakultas][prodi];
+                    $('#total').text('Rp ' + data.pangkal.toLocaleString('id-ID'));
                     $('#angsuran1').text('Rp ' + data.angsuran1.toLocaleString('id-ID'));
                     $('#angsuran2').text('Rp ' + data.angsuran2.toLocaleString('id-ID'));
                 } else {
                     alert('Silakan pilih jenjang dan program studi terlebih dahulu');
                 }
+            });
+            $(document).ready(function(){
+              $(".hero-slider").owlCarousel({
+                items: 1,
+                nav: false,
+                dots: false,
+                loop: true,
+                autoplay: true
+              });
             });
         </script>
 
