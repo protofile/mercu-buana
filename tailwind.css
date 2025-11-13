@@ -521,3 +521,11 @@ header.for-mobile{
     @apply inline-block px-2 py-2;
   }
 }
+@media only screen and (max-width:768px){
+    .hero-text{
+      @apply mt-0;
+    }
+    .hero{
+      @apply bg-none;
+    }
+}

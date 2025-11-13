@@ -674,30 +674,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-mc-blue-2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(4 33 87 / var(--tw-bg-opacity));
-}
-
-.bg-mc-blue-1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(16 83 141 / var(--tw-bg-opacity));
+.bg-\[url\(\.\.\/images\/mercu-buana-overlay\.jpg\)\] {
+  background-image: url(../images/mercu-buana-overlay.jpg);
 }
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(assets\/images\/mercu-buana-overlay\.jpg\)\] {
-  background-image: url(assets/images/mercu-buana-overlay.jpg);
-}
-
-.bg-\[url\(\'assets\/images\/mercu-buana-overlay\.jpg\'\)\] {
-  background-image: url('assets/images/mercu-buana-overlay.jpg');
-}
-
-.bg-\[url\(\.\.\/images\/mercu-buana-overlay\.jpg\)\] {
-  background-image: url(../images/mercu-buana-overlay.jpg);
 }
 
 .from-slate-200 {
@@ -710,16 +692,12 @@ video {
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.p-80 {
-  padding: 20rem;
-}
-
 .p-20 {
   padding: 5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-5 {
@@ -1887,5 +1865,15 @@ header.for-mobile {
     padding-right: 0.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .hero-text {
+    margin-top: 0px;
+  }
+
+  .hero {
+    background-image: none;
   }
 }
