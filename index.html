@@ -92,26 +92,20 @@
                                 </div>
                                 <div class="inp-group">
                                     <label for="">Pilih Jenjang</label>
-                                    <select name="" id="">
-                                        <option value="">S1</option>
-                                        <option value="">S2</option>
-                                        <option value="">S3</option>
+                                    <select name="" id="fJenjang">
+                                        <option value="">Pilih Jenjang</option>
                                     </select>
                                 </div>
                                 <div class="inp-group">
                                     <label for="">Pilih Fakultas</label>
-                                    <select name="" id="">
-                                        <option value="">Fakultas 1</option>
-                                        <option value="">Fakultas 2</option>
-                                        <option value="">Fakultas 3</option>
+                                    <select name="" id="fFakultas">
+                                        <option value="">Pilih Fakultas</option>
                                     </select>
                                 </div>
-                                <div class="inp-group">
+                                <div class="inp-group"></option>
                                     <label for="">Pilih Program Studi</label>
-                                    <select name="" id="">
-                                        <option value="">Program Studi 1</option>
-                                        <option value="">Program Studi 2</option>
-                                        <option value="">Program Studi 3</option>
+                                    <select name="" id="fProdi">
+                                        <option value="">Pilih Program Studi</option>
                                     </select>
                                 </div>
                                 <div class="flex justify-center">
@@ -861,6 +855,72 @@
         <script src="assets/js/main.js"></script>
 
         <script>
+            const fData = {
+                "Jenjang Sarjana (S1)": {
+                    "Fakultas Ekonomi dan Bisnis": [
+                        "Manajemen",
+                        "Akuntansi"
+                    ],
+                    "Fakultas Ilmu Komunikasi": [
+                        "Public Relations",
+                        "Broadcasting",
+                        "Digital Communication",
+                        "Marketing Communication"
+                    ],
+                        "Fakultas Ilmu Komputer": [
+                        "Informatika",
+                        "Sistem Informasi"
+                    ],
+                    "Fakultas Psikologi": [
+                        "Psikologi"
+                    ],
+                    "Fakultas Teknik": [
+                        "Teknik Mesin",
+                        "Teknik Elektro",
+                        "Teknik Industri",
+                        "Arsitektur",
+                        "Teknik Sipil"
+                    ],
+                        "Fakultas Desain dan Seni Kreatif": [
+                        "Desain Komunikasi Visual",
+                        "Desain Produk",
+                        "Desain Interior"
+                    ]
+                },
+                "Jenjang Magister (S2)": {
+                    "Fakultas Ekonomi dan Bisnis": [
+                        "Manajemen (Magister)",
+                        "Akuntansi (Magister)"
+                    ],
+                    "Fakultas Ilmu Komunikasi": [
+                        "Ilmu Komunikasi (Magister)"
+                    ],
+                    "Fakultas Teknik": [
+                        "Teknik Sipil (Magister)",
+                        "Teknik Mesin (Magister)",
+                        "Teknik Elektro (Magister)",
+                        "Teknik Industri (Magister)",
+                        "Arsitektur (Magister)"
+                    ]
+                },
+                "Jenjang Doktor (S3)": {
+                    "Fakultas Ekonomi dan Bisnis": [
+                        "Manajemen (Doktor)"
+                    ],
+                    "Fakultas Ilmu Komunikasi": [
+                        "Ilmu Komunikasi (Doktor)"
+                    ],
+                    "Fakultas Teknik": [
+                        "Teknik Elektro (Doktor)"
+                    ]
+                },
+                "Profesi": {
+                    "Profesi": [
+                        "Profesi Insinyur",
+                        "Profesi Arsitek"
+                    ]
+                }
+            };
             const biayaData = {
                 "Fakultas Desain dan Seni Kreatif": {
                     "Desain Produk": { "pangkal": '20.475.000', "angsuran1": '3.850.000', "angsuran2": '355.000/bulan' },
@@ -907,6 +967,50 @@
                 }
             };
 
+            //FORM REGISTER
+            const fJenjangSelect = $('#fJenjang');
+            const fFakultasSelect = $('#fFakultas');
+            const fProdiSelect = $('#fProdi');
+
+            // isi dropdown jenjang
+            Object.keys(fData).forEach(fJenjang => {
+                fJenjangSelect.append(`<option value="${fJenjang}">${fJenjang}</option>`);
+            });
+
+            // ketika jenjang berubah
+            fJenjangSelect.on('change', function() {
+                const fSelectedJenjang = $(this).val();
+                fFakultasSelect.empty().append('<option value="">Pilih Fakultas</option>');
+                fProdiSelect.empty().append('<option value="">Pilih Program Studi</option>').prop('disabled', true);
+
+                if (fSelectedJenjang && fData[fSelectedJenjang]) {
+                Object.keys(fData[fSelectedJenjang]).forEach(fFakultas => {
+                    fFakultasSelect.append(`<option value="${fFakultas}">${fFakultas}</option>`);
+                });
+                fFakultasSelect.prop('disabled', false);
+                } else {
+                fFakultasSelect.prop('disabled', true);
+                }
+            });
+
+            // ketika fakultas berubah
+            fFakultasSelect.on('change', function() {
+                const fSelectedJenjang = fJenjangSelect.val();
+                const fSelectedFakultas = $(this).val();
+                fProdiSelect.empty().append('<option value="">Pilih Program Studi</option>');
+
+                if (fSelectedJenjang && fSelectedFakultas && fData[fSelectedJenjang][fSelectedFakultas]) {
+                fData[fSelectedJenjang][fSelectedFakultas].forEach(fProdi => {
+                    fProdiSelect.append(`<option value="${fProdi}">${fProdi}</option>`);
+                });
+                fProdiSelect.prop('disabled', false);
+                } else {
+                fProdiSelect.prop('disabled', true);
+                }
+            });
+
+
+            //HITUNG BIAYA
             // === Populate Program Studi when Jenjang changes ===
             $('#fakultas').on('change', function() {
                 const fakultas = $(this).val();
